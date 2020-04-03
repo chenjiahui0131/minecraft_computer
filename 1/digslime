@@ -1,6 +1,6 @@
-init=24
-depth=32
-width=32
+init=4
+depth=8
+width=4
 slot=1
 
 for d=1,init do
@@ -46,7 +46,7 @@ for d=1,depth do
     turtle.dig()
     turtle.forward()
   end
-  turtle.digdown()
+  turtle.digDown()
   turtle.turnRight()
   turtle.down()
 end
@@ -56,7 +56,7 @@ for h=1,depth/4-1 do
   turtle.up()
   turtle.up()
   turtle.up()
-  for i=1.width/2-1 do
+  for i=1,width/2-1 do
     for j=1,width-1 do
       if turtle.getItemCount(slot)==0 then
         slot=slot+1
